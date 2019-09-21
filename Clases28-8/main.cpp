@@ -1,9 +1,33 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 int main()
 {
+    int binario=0,i=1,num;
+    cout<<"Ingrese un numero: ";
+    cin>>num;
+
+    while(num!=0){
+    binario+=(num%2)*i;
+    num/=2;
+    i*=10;
+    }
+    cout<<binario;
+
+    int decimal=0,i=0,res,n;
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    while (n!=0)
+    {
+        res = n%10;
+        n/= 10;
+        decimal+= res*pow(2,i);
+        ++i;
+    }
+    cout<<decimal;
+
+
     int n,rpta;
     cout<<"Ingrese un numero: ";
     cin>>n;
@@ -18,27 +42,3 @@ int main()
         cout<<"El numero "<<rpta<<" es potencia de 2";
     else
         cout<<"El numero "<<rpta<<" no es potencia de 2";
-
-    int a,b,c,d,e,bin,rpta;
-    cout<<"Ingrese un numero: ";
-    cin>>bin;
-
-    a=bin/10000;
-    b=bin/1000;
-    b=b%10;
-    c=bin%1000;
-    c=c/100;
-    d=bin%100;
-    d=d/10;
-    e=bin%10;
-
-    a*=16;
-    b*=8;
-    c*=4;
-    d*=2;
-    e*=1;
-
-    rpta=a+b+c+d+e;
-    cout<<rpta;
-
-}
