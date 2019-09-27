@@ -1,0 +1,83 @@
+#include <iostream>
+
+using namespace std;
+
+void imprimir(int arr[],int tam){
+        for(int i=0;i<tam;i++){
+            cout<<arr[i]<<endl;
+        }
+}
+
+int sumait(int arr[],int tam){
+    int suma=0;
+    for(int i=0;i<tam;i++){
+        suma+=arr[i];
+    }
+    return suma;
+}
+
+int sumarec(int arr[],int tam){
+
+    if(tam==1){
+        return arr[0];
+    }
+    else
+        return arr[tam-1]+sumarec(arr,tam-1);
+
+}
+
+void invert(int arr[],int tam){
+
+    int aux;
+    for(int i=0;i<tam/2;i++){
+            aux=arr[i];
+            arr[i]=arr[tam-1-i];
+            arr[tam-1-i]=aux;
+
+        }
+}
+
+int invertr(int arr[], int tam){
+
+    if (tam==1)
+        return arr[0];
+
+    else{
+    int aux = arr[0];
+    arr[0] = arr[tam-1];
+    arr[--tam] = aux;
+
+    return invertr(arr +1, tam-1);
+    }
+}
+
+void ordenar(int arr[], int tam){
+
+  int aux,c=0,sige=1;
+
+    while (c<tam){
+        while (sige<tam){
+            if (arr[c]>arr[sige]){
+                aux=arr[c];
+                arr[c]=arr[sige];
+                arr[sige]=aux;
+            }
+
+        sige++;
+        }
+        c++;
+        sige=c+1;
+        }
+}
+
+
+
+int main(){
+        int x[6]={10,14,7,4,3,5};
+        //invertr(x,5);
+        ordenar(x,6);
+        imprimir(x,6);
+
+}
+
+  
