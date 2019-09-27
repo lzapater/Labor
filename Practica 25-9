@@ -33,8 +33,7 @@ void invert(int arr[],int tam){
             aux=arr[i];
             arr[i]=arr[tam-1-i];
             arr[tam-1-i]=aux;
-
-        }
+    }
 }
 
 int invertr(int arr[], int tam){
@@ -49,25 +48,6 @@ int invertr(int arr[], int tam){
 
     return invertr(arr +1, tam-1);
     }
-}
-
-void ordenar(int arr[], int tam){
-
-  int aux,c=0,sige=1;
-
-    while (c<tam){
-        while (sige<tam){
-            if (arr[c]>arr[sige]){
-                aux=arr[c];
-                arr[c]=arr[sige];
-                arr[sige]=aux;
-            }
-
-        sige++;
-        }
-        c++;
-        sige=c+1;
-        }
 }
 
 void burbuja(int arr[],int tam){
@@ -85,6 +65,18 @@ void burbuja(int arr[],int tam){
     }
 }
 
+void insertion(int arr[],int tam){
+
+
+
+
+
+
+
+
+
+}
+
 
 int main(){
         int x[6]={10,14,7,4,3,5};
@@ -93,3 +85,4 @@ int main(){
         burbuja(x,6);
         imprimir(x,6);
 }
+
