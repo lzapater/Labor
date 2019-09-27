@@ -88,3 +88,44 @@ int main(){
         imprimir(x,6);
 }
 
+void quicksort(int arr,int p,int u)
+{
+  int medio,pivote;
+  central=(p+u)/2;
+  pivote=arr[central];
+  i=p;
+  j=u;
+  do
+  {
+    while(arr[i]<pivote) i++;
+    while(arr[j]>pivote) j--;
+    if(i<=j)
+     {
+      double temp;
+      temp=arr[i];
+      arr[i]=arr[j]; /*intercarrmbia A[i] con A[j] */
+      arr[j]=temp;
+      i++;
+      j--;
+     }
+   }
+   while(i<=j);
+   if(p<j)
+   quicksort(arr,p,j); /*mismo proceso con sublista izquierda*/
+   if(i<u)
+   quicksort(arr,i,u); /*mismo proceso con sublista derecha*/
+}
+void escribir(double arr[20], int n)
+{
+ int i;
+cout<<endl<<"ARREGLO ASCENDENTE"<<endl<<endl;
+   for(i=0;i<n;i++)
+     {
+      cout<<arr[i]<<setw(5);
+     }
+   cout<<endl<<endl;
+
+}
+
+
+
