@@ -67,16 +67,18 @@ void burbuja(int arr[],int tam){
 
 void insertion(int arr[],int tam){
 
-
-
-
-
-
-
-
-
+    int pivot,j;
+    for (int i=1;i<tam; i++){
+        pivot=arr[i];
+        j=i-1;
+        
+        while (j>=0 && arr[j]>pivot){
+            arr[j+1]=arr[j];
+            j--;
+        }
+        arr[j+1]=pivot;
+    }
 }
-
 
 int main(){
         int x[6]={10,14,7,4,3,5};
