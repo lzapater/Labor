@@ -60,40 +60,39 @@ int invertr(int arr[], int tam){
     }
 }
 
-void burbuja(int arr[],int tam){
-
-    int i,j;
-    for (i=0;i<tam-1;i++){
-        for(j=0;j<tam-i-1;j++){
-            if(arr[j]>arr[j+1])
-            {
-                int temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-            }
-        }
-    }
-}
-
 void insertion(int arr[],int tam){
 
-    int pivot,j;
+    int lugar,j;
     for (int i=1;i<tam; i++){
-        pivot=arr[i];
+        lugar=arr[i];
         j=i-1;
 
-        while (j>=0 && arr[j]>pivot){
+        while (j>=0 && arr[j]>lugar){
             arr[j+1]=arr[j];
             j--;
         }
-        arr[j+1]=pivot;
+        arr[j+1]=lugar;
     }
 }
+void burbuja(int* arr, int tam) {
 
+	int* ptr;
+	ptr = arr;
+	for (int i = 0; i < tam - 1; i++) {
+		for (int j = 0; j < tam - i - 1; ptr++) {
+			if (*ptr > *(ptr+1))
+			{
+				int temp = *ptr;
+				*ptr = *(ptr+1);
+				*(ptr + 1) = temp;
+			}
+		}
+	}
+}
 int main(){
         int x[6]={10,14,7,4,3,5};
         //cout<<sumait(x,6);
         //cout<<sumarec(x,6);
-        (x,6);
+        insertion(x,6);
         imprimir(x,6);
 }
