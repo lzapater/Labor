@@ -61,9 +61,21 @@ bool palindrome(char *cad, char *ultimo){
 
 }
 
+bool palindrome_rec(char *cad, char *ultimo){
+
+    if (*(cad)!=*(ultimo))
+        return false;
+
+    if (cad>ultimo)
+        return true;
+
+
+    return palindrome_rec(++cad,--ultimo);
+}
+
 int main(){
-   char cad[]="abcde";
+   char cad[]="abcba";
    char *ult=cad+tam_it(cad)-1;
-   invert_rec(cad,ult);
-   cout<<cad;
+   cout<<palindrome_rec(cad,ult);
+
 }
