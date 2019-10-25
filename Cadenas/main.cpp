@@ -44,13 +44,12 @@ void invert_rec(char *cad,char *ultimo){
     if(cad==ultimo){
         return;
     }
-
     cambiar(cad,ultimo);
 	invert_rec(++cad,--ultimo);
 
 }
 
-bool palindrome(char *cad, char *ultimo){
+bool palindrome_it(char *cad,char *ultimo){
 
     int tam=tam_it(cad);
 
@@ -64,10 +63,18 @@ bool palindrome(char *cad, char *ultimo){
 	}
 }
 
+bool palindrome_rec(char *cad,char *ultimo){
+
+    if(cad==ultimo){
+        return;
+    if)
+
+}
+
 
 int main(){
    char cad[]="abcba";
    char *ult=cad+tam_it(cad)-1;
-   cout<<palindrome(cad,ult);
+   cout<<palindrome_rec(cad,ult);
 
 }
