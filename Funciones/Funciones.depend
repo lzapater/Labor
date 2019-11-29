@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1574994109 source:c:\users\luis zapater\uni\ciencia de la computacion\labor\funciones\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+
