@@ -8,7 +8,7 @@ Persona::Persona()
     setDni(0);
 }
 
-Persona::Persona(string n, uint8_t _edad, int _dni)
+Persona::Persona(string n, int _edad, int _dni)
 {
     string _n;
     string _a;
