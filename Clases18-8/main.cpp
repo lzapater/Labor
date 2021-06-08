@@ -44,3 +44,5 @@ Type top() {
     
 int empty() {return (topSub == -1);}
 }
+
+Stack<int> myIntStack;
